@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/JsonRpc.dir/main.cpp.o CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o  -o JsonRpc -rdynamic -ljson 

@@ -1,0 +1,3 @@
+/home/liangyan/jsonRPC/CMakeFiles/edit_cache.dir
+/home/liangyan/jsonRPC/CMakeFiles/rebuild_cache.dir
+/home/liangyan/jsonRPC/CMakeFiles/JsonRpc.dir

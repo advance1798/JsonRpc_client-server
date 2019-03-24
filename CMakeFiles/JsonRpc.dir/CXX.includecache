@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/liangyan/jsonRPC/JsonRpc.cpp
+JsonRpc.h
+/home/liangyan/jsonRPC/JsonRpc.h
+iostream
+-
+string.h
+-
+cstring
+-
+
+/home/liangyan/jsonRPC/JsonRpc.h
+string
+-
+json/json.h
+-
+
+/home/liangyan/jsonRPC/main.cpp
+iostream
+-
+string
+-
+JsonRpc.h
+/home/liangyan/jsonRPC/JsonRpc.h
+

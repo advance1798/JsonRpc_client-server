@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/liangyan/jsonRPC/JsonRpc.cpp
+/home/liangyan/JSONRPC_COPY/JsonRpc.cpp
 JsonRpc.h
-/home/liangyan/jsonRPC/JsonRpc.h
+/home/liangyan/JSONRPC_COPY/JsonRpc.h
 iostream
 -
 string.h
@@ -16,17 +16,41 @@ string.h
 cstring
 -
 
-/home/liangyan/jsonRPC/JsonRpc.h
+/home/liangyan/JSONRPC_COPY/JsonRpc.h
 string
 -
 json/json.h
 -
 
-/home/liangyan/jsonRPC/main.cpp
+/home/liangyan/JSONRPC_COPY/client.cpp
 iostream
 -
 string
 -
+string.h
+-
+curl/curl.h
+-
+client.h
+/home/liangyan/JSONRPC_COPY/client.h
+
+/home/liangyan/JSONRPC_COPY/client.h
 JsonRpc.h
-/home/liangyan/jsonRPC/JsonRpc.h
+/home/liangyan/JSONRPC_COPY/JsonRpc.h
+
+/home/liangyan/JSONRPC_COPY/main.cpp
+iostream
+-
+string
+-
+cstring
+-
+string.h
+-
+curl/curl.h
+-
+JsonRpc.h
+/home/liangyan/JSONRPC_COPY/JsonRpc.h
+client.h
+/home/liangyan/JSONRPC_COPY/client.h
 

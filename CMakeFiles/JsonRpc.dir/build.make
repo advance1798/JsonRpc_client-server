@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/liangyan/jsonRPC
+CMAKE_SOURCE_DIR = /home/liangyan/JSONRPC_COPY
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/liangyan/jsonRPC
+CMAKE_BINARY_DIR = /home/liangyan/JSONRPC_COPY
 
 # Include any dependencies generated for this target.
 include CMakeFiles/JsonRpc.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/JsonRpc.dir/flags.make
 
 CMakeFiles/JsonRpc.dir/main.cpp.o: CMakeFiles/JsonRpc.dir/flags.make
 CMakeFiles/JsonRpc.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liangyan/jsonRPC/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/JsonRpc.dir/main.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/JsonRpc.dir/main.cpp.o -c /home/liangyan/jsonRPC/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liangyan/JSONRPC_COPY/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/JsonRpc.dir/main.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/JsonRpc.dir/main.cpp.o -c /home/liangyan/JSONRPC_COPY/main.cpp
 
 CMakeFiles/JsonRpc.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/JsonRpc.dir/main.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liangyan/jsonRPC/main.cpp > CMakeFiles/JsonRpc.dir/main.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liangyan/JSONRPC_COPY/main.cpp > CMakeFiles/JsonRpc.dir/main.cpp.i
 
 CMakeFiles/JsonRpc.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/JsonRpc.dir/main.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liangyan/jsonRPC/main.cpp -o CMakeFiles/JsonRpc.dir/main.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liangyan/JSONRPC_COPY/main.cpp -o CMakeFiles/JsonRpc.dir/main.cpp.s
 
 CMakeFiles/JsonRpc.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/JsonRpc.dir/main.cpp.o.provides.build: CMakeFiles/JsonRpc.dir/main.cp
 
 CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o: CMakeFiles/JsonRpc.dir/flags.make
 CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o: JsonRpc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liangyan/jsonRPC/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o -c /home/liangyan/jsonRPC/JsonRpc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liangyan/JSONRPC_COPY/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o -c /home/liangyan/JSONRPC_COPY/JsonRpc.cpp
 
 CMakeFiles/JsonRpc.dir/JsonRpc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/JsonRpc.dir/JsonRpc.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liangyan/jsonRPC/JsonRpc.cpp > CMakeFiles/JsonRpc.dir/JsonRpc.cpp.i
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liangyan/JSONRPC_COPY/JsonRpc.cpp > CMakeFiles/JsonRpc.dir/JsonRpc.cpp.i
 
 CMakeFiles/JsonRpc.dir/JsonRpc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/JsonRpc.dir/JsonRpc.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liangyan/jsonRPC/JsonRpc.cpp -o CMakeFiles/JsonRpc.dir/JsonRpc.cpp.s
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liangyan/JSONRPC_COPY/JsonRpc.cpp -o CMakeFiles/JsonRpc.dir/JsonRpc.cpp.s
 
 CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o.requires:
 
@@ -105,19 +105,45 @@ CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o.provides: CMakeFiles/JsonRpc.dir/JsonRpc.cp
 CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o.provides.build: CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o
 
 
+CMakeFiles/JsonRpc.dir/client.cpp.o: CMakeFiles/JsonRpc.dir/flags.make
+CMakeFiles/JsonRpc.dir/client.cpp.o: client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/liangyan/JSONRPC_COPY/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/JsonRpc.dir/client.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/JsonRpc.dir/client.cpp.o -c /home/liangyan/JSONRPC_COPY/client.cpp
+
+CMakeFiles/JsonRpc.dir/client.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/JsonRpc.dir/client.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/liangyan/JSONRPC_COPY/client.cpp > CMakeFiles/JsonRpc.dir/client.cpp.i
+
+CMakeFiles/JsonRpc.dir/client.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/JsonRpc.dir/client.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/liangyan/JSONRPC_COPY/client.cpp -o CMakeFiles/JsonRpc.dir/client.cpp.s
+
+CMakeFiles/JsonRpc.dir/client.cpp.o.requires:
+
+.PHONY : CMakeFiles/JsonRpc.dir/client.cpp.o.requires
+
+CMakeFiles/JsonRpc.dir/client.cpp.o.provides: CMakeFiles/JsonRpc.dir/client.cpp.o.requires
+	$(MAKE) -f CMakeFiles/JsonRpc.dir/build.make CMakeFiles/JsonRpc.dir/client.cpp.o.provides.build
+.PHONY : CMakeFiles/JsonRpc.dir/client.cpp.o.provides
+
+CMakeFiles/JsonRpc.dir/client.cpp.o.provides.build: CMakeFiles/JsonRpc.dir/client.cpp.o
+
+
 # Object files for target JsonRpc
 JsonRpc_OBJECTS = \
 "CMakeFiles/JsonRpc.dir/main.cpp.o" \
-"CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o"
+"CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o" \
+"CMakeFiles/JsonRpc.dir/client.cpp.o"
 
 # External object files for target JsonRpc
 JsonRpc_EXTERNAL_OBJECTS =
 
 JsonRpc: CMakeFiles/JsonRpc.dir/main.cpp.o
 JsonRpc: CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o
+JsonRpc: CMakeFiles/JsonRpc.dir/client.cpp.o
 JsonRpc: CMakeFiles/JsonRpc.dir/build.make
 JsonRpc: CMakeFiles/JsonRpc.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liangyan/jsonRPC/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable JsonRpc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/liangyan/JSONRPC_COPY/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable JsonRpc"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/JsonRpc.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -127,6 +153,7 @@ CMakeFiles/JsonRpc.dir/build: JsonRpc
 
 CMakeFiles/JsonRpc.dir/requires: CMakeFiles/JsonRpc.dir/main.cpp.o.requires
 CMakeFiles/JsonRpc.dir/requires: CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o.requires
+CMakeFiles/JsonRpc.dir/requires: CMakeFiles/JsonRpc.dir/client.cpp.o.requires
 
 .PHONY : CMakeFiles/JsonRpc.dir/requires
 
@@ -135,6 +162,6 @@ CMakeFiles/JsonRpc.dir/clean:
 .PHONY : CMakeFiles/JsonRpc.dir/clean
 
 CMakeFiles/JsonRpc.dir/depend:
-	cd /home/liangyan/jsonRPC && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liangyan/jsonRPC /home/liangyan/jsonRPC /home/liangyan/jsonRPC /home/liangyan/jsonRPC /home/liangyan/jsonRPC/CMakeFiles/JsonRpc.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/liangyan/JSONRPC_COPY && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/liangyan/JSONRPC_COPY /home/liangyan/JSONRPC_COPY /home/liangyan/JSONRPC_COPY /home/liangyan/JSONRPC_COPY /home/liangyan/JSONRPC_COPY/CMakeFiles/JsonRpc.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/JsonRpc.dir/depend
 

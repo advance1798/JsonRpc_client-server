@@ -110,6 +110,7 @@ JsonRpcResponse::JsonRpcResponse(const std::string &json)
 		cerr << "json parse failed" << endl;
 	    return;
 	}
+	else cout << "json parse successfully" << endl;
 }
 
 int JsonRpcResponse::Validate()

@@ -4,8 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/liangyan/jsonRPC/JsonRpc.cpp" "/home/liangyan/jsonRPC/CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o"
-  "/home/liangyan/jsonRPC/main.cpp" "/home/liangyan/jsonRPC/CMakeFiles/JsonRpc.dir/main.cpp.o"
+  "/home/liangyan/JSONRPC_COPY/JsonRpc.cpp" "/home/liangyan/JSONRPC_COPY/CMakeFiles/JsonRpc.dir/JsonRpc.cpp.o"
+  "/home/liangyan/JSONRPC_COPY/client.cpp" "/home/liangyan/JSONRPC_COPY/CMakeFiles/JsonRpc.dir/client.cpp.o"
+  "/home/liangyan/JSONRPC_COPY/main.cpp" "/home/liangyan/JSONRPC_COPY/CMakeFiles/JsonRpc.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

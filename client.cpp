@@ -6,7 +6,6 @@
 
 using namespace std;
 
-
 JsonRpcClient::JsonRpcClient()
 {
 	recvdata = " ";
@@ -16,59 +15,56 @@ static size_t receive_data(void *ptr,size_t size,size_t nmemb,void *stream)
 {
     	size_t nsize = size * nmemb;
 
-    	//可以用全局变量/成员变量memcpy把ptr拷贝出来
-    	//memcpy(recvdata,buffer,nsize);
     	std::string *s = (std::string *)stream;
-
-    	//std::string str;
-    	//str = (char *)ptr;
-    	//cout << str << endl;
-    	s->append((const char *)ptr,nsize);
-
-		//c->recvdata += str;
-    
-    	//c->recvdata += string((const char *)ptr,nsize);
-
-    	//std::string *buffer = (std::string*)stream;
-        //buffer->append((char*)ptr, nsize);
-
-      //  memcpy(&(c->recvdata),ptr,nsize);
+    	s->append((const char *)ptr,nsize);    
+    	 //c->recvdata += string((const char *)ptr,nsize);
     	return nsize; 
 }
 
-void JsonRpcClient::SendData(const char *jsondata, const char *url)
+//static size_t read_data(void *ptr,size_t size,size_t nmemb,void *stream)
+//{
+//	size_t nsize = size * nmemb;
+
+//	const char *s = (const char *)stream;
+//	std::string *ptr1 = (std::string *)ptr;
+//	ptr1->append(s, nsize);
+//
+//	return nsize;
+//}
+
+int JsonRpcClient::SendData(const char *url, const char *jsondata)
 {
-	struct curl_slist *header;
-
 	CURL *curl = NULL;
-	curl = curl_easy_init();
-
 	CURLcode res;
+	struct curl_slist *header;
+	//curl_socket_t sockfd;
+	//long sockextr;
+	//size_t iolen;	
 
-	CURLcode p1,p2,p3,p4,p5;
+	CURLcode p1;
 
+	curl = curl_easy_init();
 	if(curl != NULL)
 	{
-		curl_easy_setopt(curl,CURLOPT_URL,url);
-		
 		//设置http发送的内容类型为JSON
-		header  = curl_slist_append(header,"Content_Type:json");
+		header  = curl_slist_append(header, "Content_Type:json");
 		//构建HTTP报文头,请求消息头用于告诉服务器如何处理请求
-		p1 = curl_easy_setopt(curl,CURLOPT_HTTPHEADER,header);
+		curl_easy_setopt(curl, CURLOPT_HTTPHEADER, header);
 
-		//自定义请求方式p
-		//curl_easy_setopt(curl,CURLOPT_CUSTOMREQUEST,"GET");
-		
+		curl_easy_setopt(curl, CURLOPT_URL, url);//url
+		curl_easy_setopt(curl, CURLOPT_PORT, 6666);
+
 		//设置为非0表示本次操作为POST
-		//	curl_easy_setopt(curl,CURLOPT_POST,1);
-
-		p2 = curl_easy_setopt(curl,CURLOPT_VERBOSE,1);
-
+		curl_easy_setopt(curl,CURLOPT_POST,1);
+		curl_easy_setopt(curl, CURLOPT_VERBOSE, 1);
 		//设置要POST的JSON数据
-		p3 = curl_easy_setopt(curl,CURLOPT_POSTFIELDS,jsondata);
+		curl_easy_setopt(curl, CURLOPT_POSTFIELDS, jsondata);
 
-		p4 = curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, receive_data);
-   		p5 = curl_easy_setopt(curl, CURLOPT_WRITEDATA, &(this->recvdata));
+		curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, receive_data);//接收
+   		curl_easy_setopt(curl, CURLOPT_WRITEDATA, &(this->recvdata));
+
+   		//curl_easy_setopt(curl, CURLOPT_READFUNCTION, read_data);//发送
+   		//curl_easy_setopt(curl, CURLOPT_READDATA, jsondata);
 
 		res = curl_easy_perform(curl);
 
@@ -76,26 +72,29 @@ void JsonRpcClient::SendData(const char *jsondata, const char *url)
 		{
 				cout << "curl_easy_perform failed" << endl;
 		}
-		
-		//if(res == CURLE_OK)
-		//{
-		// cout << "curl_easy_perform successfully" << endl;
-		//}
-	
-	curl_easy_cleanup(curl);
+
+		curl_easy_cleanup(curl);	
 	}
+	
 
-
+	return 0;
 }
 
 
 
 
-JsonRpcResponse JsonRpcClient::doRequest(const char *url, const char * jsondata) 
+void JsonRpcClient::doRequest(const char *url, const char *jsondata) 
 {
 			JsonRpcClient temp;
 
-			temp.SendData(jsondata, url);
+			temp.SendData(url, jsondata);
 
-			return JsonRpcResponse(temp.recvdata);
+			cout << temp.recvdata << endl;
+			//JsonRpcResponse(temp.recvdata);
+			
+			JsonRpcResponse *p = new JsonRpcResponse(temp.recvdata);
+			cout << p->GetId() << endl;
+			cout << p->GetResult() << endl;
+
+			delete p;
 }

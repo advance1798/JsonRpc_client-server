@@ -47,6 +47,8 @@ using namespace std;
 
 //	cout << D.Validate() << endl;
 
+//Json (*f)(Json &params);
+
 int main()
 {
 	char jsondata[1024];
@@ -65,14 +67,8 @@ int main()
 
 	JsonRpcClient one;
 
-	one.doRequest("http://172.18.6.62/demo",A.ToString().c_str());
+	
+	one.doRequest("127.0.0.1",A.ToString().c_str());
 	//one.SendData(jsondata,"http://172.18.6.62/demo");
-
-	
-
-	
-
-
-
 	return 0;
 }

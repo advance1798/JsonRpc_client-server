@@ -36,7 +36,6 @@ int JsonRpcRequest::Validate()
 
 		return NO_ID;
 
-
 	if((json_str.isMember("params")) != true)
 
 		return NO_PARAMS;

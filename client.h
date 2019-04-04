@@ -9,17 +9,11 @@ class JsonRpcClient
 	private:
 		std::string recvdata;
 		
-		void SendData(const char *jsondata, const char *url);
-		//size_t receive_data(void *ptr,size_t size,size_t nmemb,void *stream);
+		int SendData(const char *url, const char *jsondata);
 
 	public:
 		JsonRpcClient();
-		//void SendData(const char *jsondata, const char *url);
-		JsonRpcResponse doRequest(const char *url, const char * jsondata);
-		//JsonRpcResponse doRequest(const char *url, JsonRpcRequest &request);
-		//friend size_t receive_data(void *ptr,size_t size,size_t nmemb,void *stream);
+		void doRequest(const char *url, const char * jsondata);
 };
-
-//size_t receive_data(void *ptr,size_t size,size_t nmemb,void *stream);
 
 #endif
